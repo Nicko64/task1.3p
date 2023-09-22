@@ -1,0 +1,57 @@
+nav {
+    background: #3A3B3C;
+    padding: 40px;
+    text-align: center;
+}
+
+.main {
+    max-width: 80%;
+    margin: auto;
+    
+}
+
+h1 {
+    color: #E4E6EB;
+    font: arial;
+}
+
+h2 {
+    color: #3A3B3C;
+    font: arial;
+    text-align: center;
+}
+
+p {
+    color: #3A3B3C;
+    font: arial;
+}
+
+img {
+    max-width: 100%;
+}
+
+table {
+    font: arial;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+    h1, h2 {
+        font-size: 8vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    p {
+        font-size: 4vw;
+    }
+}
+
+

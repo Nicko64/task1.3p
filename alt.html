@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SIT120 Task1.3P</title>
+        <script type="importmap">
+            {
+              "imports": {
+                "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+              }
+            }
+        </script>
+        <script src="https://unpkg.com/vue-router@4"></script>
+        <link rel="icon" type="image/x-icon" href="640px-Deakin_University_Logo_2017.svg.png">
+        <link rel ="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <nav>
+            <h1>SIT120 Task1.3P</h1>
+            <a style="color: #E4E6EB; padding: 10px" href="index.html">HTML Demonstration</a>
+            <a style="color: #E4E6EB; padding: 10px" href="alt.html">VUE Demonstration</a>
+        </nav>
+
+        <script type="module">
+            import { createApp } from 'vue'
+            
+            createApp({
+              data() {
+                return {
+                  message: 'Hello World!'
+                }
+              },
+              methods: {
+                reverseMessage() {
+                  this.message = this.message.split('').reverse().join('')
+                },
+                notify() {
+                  alert('navigation was prevented.')
+                }
+              }
+            }).mount('#app')
+        </script>   
+
+        <div id="app" class="main">
+            <h2>Vue Demonstration</h2>
+            <p>The purpose of this page is to demonstrate the output of Vue code.</p>
+            <h2>Handling User Inputs</h2>
+            <p>Your message is: {{ message }}</p>
+            <input v-model="message">
+            <br>
+            <button @click="reverseMessage">Reverse Message</button>
+            <br>
+            <h2>Components</h2>
+            <h2>Vue Router</h2>
+            <p>
+                <router-link to="/">Go to Home</router-link>
+                <router-link to="/about">Go to About</router-link>
+            </p>
+            <router-view></router-view>
+        </div>
+    </body>
+</html>
